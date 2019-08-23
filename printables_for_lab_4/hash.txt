@@ -1,0 +1,446 @@
+---------------------------------------------
+--Author : Spencer Stair
+--Date : 11/12/18 - 11/25/18
+--C Option for Lab4 -- Hashing
+--
+--I miss C already :(
+-------------------------------------------
+
+with ada.text_io, ada.unchecked_conversion;
+use ada.text_io;
+
+procedure hash is
+
+	package intIO is new ada.text_io.integer_io(integer);
+	use intIO;
+	package longIntIO is new ada.text_io.integer_io(standard.long_integer);
+	use longIntIO;
+	package floatIO is new float_iO(float);
+	use floatIO;
+	package boolIO is new ada.text_io.enumeration_io(boolean);
+	use boolIO;
+
+	type keyString is new string(1..17);
+	type stringSlice is new string(1..1);
+
+	type long_integer is mod 2**64;
+
+	function convertChar is new Ada.Unchecked_Conversion(character, long_integer);
+	function convertSlice is new Ada.Unchecked_Conversion(stringSlice, long_integer);
+ 	function convertLongInt is new Ada.Unchecked_Conversion(long_integer, integer);
+
+	type element is
+		record
+			key : keyString;
+			hashAddress : integer;
+			numProbes : integer;
+		end record;
+
+	-- get the size of the hash table from user
+	function getTableSize return integer is
+		size : integer;
+
+		begin
+			put("Enter the hash table size: ");
+			get(size);
+
+			return(size);
+
+		end getTableSize;
+
+	-- get the number of elements that will populate the table
+	function getTableFill(percentFill : in float; tableSize : in integer) return integer is
+		intPercentFill : integer;
+
+		begin
+			intPercentFill := integer(percentFill * float(tableSize));
+
+			return(intPercentFill);
+
+		end getTableFill;
+
+	-- print array element as string
+	procedure myPut(makeString : keyString) is
+
+		begin
+			put(string(makeString));
+
+		end myPut;
+
+	-- generate psuedo-random integer to handle collisions
+	function uniqueRandInteger return integer is
+		r : integer := 3;
+		w : integer := 5;
+
+		begin
+			r:= (5 * r) mod (2 ** (w + 2));
+
+			return integer(r / 4);
+
+		end uniqueRandInteger;
+
+	-- Burris hash function
+	function getGivenHashAddress(key : keyString) return integer is
+		firstSlice : stringSlice;
+                secondSlice : stringSlice;
+                thirdSlice : stringSlice;
+		charSlice : stringSlice;
+		address : integer;
+
+		begin
+			for i in 1..1
+				loop
+					firstSlice(i) := key(i + 0);
+                                        secondSlice(i) := key(i + 3);
+         			        thirdSlice(i) := key(i + 5);
+					charSlice(i) := key(1);
+				end loop;
+			address := convertLongInt((((convertSlice(firstSlice) * 512) + (convertSlice(secondSlice) / 7) + (convertSlice(thirdSlice) / 7)) / 256) mod 128);
+
+			return address;
+
+		end getGivenHashAddress;
+
+	-- my own hash function
+	function getMyHashAddress(key : keyString) return integer is
+		firstSlice : stringSlice;
+		secondSlice : stringSlice;
+                thirdSlice : stringSlice;
+		fourthSlice : stringSlice;
+		address : integer;
+
+		begin
+			for i in 1..1
+				loop
+					firstSlice(i) := key(i + 1);
+					secondSlice(i) := key(i + 3);
+                                        thirdSlice(i) := key(i + 5);
+         		                fourthSlice(i) := key(i + 7);
+				end loop;
+			address := convertLongInt(convertSlice(firstSlice) + convertSlice(secondSlice) + convertSlice(thirdSlice) + convertSlice(fourthSlice) + 95) mod 128;
+
+			return address;
+
+		end getMyHashAddress;
+
+	key : keyString;
+	s : integer;
+	data : file_type;
+	hA : integer;
+	tS : integer;
+	numElems : integer;
+	percentFill : float;
+	probeKnt : integer := 1;
+	linear : boolean;
+	collisionKnt : integer := 0;
+
+	begin
+		tS := getTableSize;
+		put("Enter percentage to fill table: ");
+		get(percentFill);
+		numElems := getTablefill(percentFill, tS);
+		put("Linear probe technique? [True/False] ");
+		get(linear);
+		put("Number of elements: ");
+		put(numElems);
+		new_line(2);
+
+		open(file => data, mode => in_file, name => "hashInput.txt");
+		set_input(data);
+
+		declare
+			hashTable : array(1..(TS)) of element;
+			elemTable : array(1..numElems) of element;
+			maxProbes : integer := 1;
+			minProbes : integer := 1;
+			avgProbes : float := 0.0;
+			firstThirty : integer := 30;
+			lastThirty : integer := numElems - 30;
+			elemKnt : integer := 0;
+
+		begin
+			-- initialize table elements
+			for i in 1..tS
+				loop
+					hashTable(i).key := "XXXXXXXXXXXXXXXXX";
+					hashTable(i).hashAddress := 0;
+					hashTable(i).numProbes := 0;
+				end loop;
+
+			for i in 1..numElems
+				loop
+					elemTable(i).key := "XXXXXXXXXXXXXXXXX";
+					elemTable(i).hashAddress := 0;
+					elemTable(i).numProbes := 1;
+				end loop;
+
+				-- implement given hash function
+				for i in 1..numElems
+					loop
+						get_line(string(key), s);
+						hA := getGivenHashAddress(key);
+						if hashTable(ha).hashAddress = 0 then
+							hashTable(ha).key := key;
+							hashTable(ha).hashAddress := hA;
+							hashTable(ha).numProbes := probeKnt;
+						else
+							collisionKnt := collisionKnt + 1;
+							if linear = true then
+								hA := hA + 1;
+								probeKnt := probeKnt + 1;
+							elsif linear = false then
+								hA := hA - uniqueRandInteger;
+								probeKnt := probeKnt + 1;
+							end if;
+							if hA > tS then
+								hA := hA - tS;
+							end if;
+							hashTable(ha).key := key;
+							hashTable(ha).hashAddress := hA;
+							hashTable(ha).numProbes := probeKnt;
+							elemTable(i).key := key;
+							elemTable(i).hashAddress := hA;
+							elemTable(i).numProbes := probeKnt;
+						end if;
+					end loop;
+
+			close(file => data);
+
+			-- print the contents of table one
+			put("-Burris Hash Function-");
+			new_line;
+			put("KEY");
+			put("                           ");
+			put("ADDRESS");
+			put("          ");
+			put("PROBES");
+			new_line;
+
+			for i in 1..tS
+				loop
+					myPut(hashTable(i).key);
+					put("     ");
+					put(hashTable(i).hashAddress);
+					put("     ");
+					put(hashTable(i).numProbes);
+					new_line;
+				end loop;
+
+			-- get the min, max, and average probes for the first thirty elements in table one
+			for i in 1..firstThirty
+				loop
+					if maxProbes < elemTable(i).numProbes then
+						maxProbes := elemTable(i).numProbes;
+					else
+						maxProbes := maxProbes;
+					end if;
+					if  elemTable(i).numProbes < minProbes then
+						minProbes := elemTable(i).numProbes;
+					else
+						minProbes := minProbes;
+					end if;
+				end loop;
+			for i in 1..firstThirty
+				loop
+					avgProbes := avgProbes + float(elemTable(i).numProbes);
+					elemKnt := elemKnt + 1;
+				end loop;
+			avgProbes := float(avgProbes) / float(elemKnt);
+
+			new_line;
+			put("Min probes of first thirty: ");
+			put(minProbes);
+			new_line;
+			put("Max probes of first thirty: ");
+			put(maxProbes);
+			new_line;
+			put("Avg probes of first thirty: ");
+			put(integer(avgProbes));
+			new_line;
+
+			-- get the min, max, and average probes for the last thirty elements in list one
+			minProbes := 1;
+			maxProbes := 1;
+			avgProbes := 0.0;
+			elemKnt := 0;
+			for i in lastThirty..numElems
+				loop
+					if maxProbes < elemTable(i).numProbes then
+						maxProbes := elemTable(i).numProbes;
+					else
+						maxProbes := maxProbes;
+					end if;
+					if  elemTable(i).numProbes < minProbes then
+						minProbes := elemTable(i).numProbes;
+					else
+						minProbes := minProbes;
+					end if;
+
+				end loop;
+			for i in lastThirty..numElems
+				loop
+					avgProbes := avgProbes + float(elemTable(i).numProbes);
+					elemKnt := elemKnt + 1;
+				end loop;
+			avgProbes := float(avgProbes) / float(elemKnt);
+
+			put("Min probes of last thirty:  ");
+			put(minProbes);
+			new_line;
+			put("Max probes of last thirty:  ");
+			put(maxProbes);
+			new_line;
+			put("Avg probes of last thirty:  ");
+			put(integer(avgProbes));
+			new_line;
+			put("Number of collisions: ");
+			put(collisionKnt);
+			new_line;
+
+			-- re-initialize elements
+			open(file => data, mode => in_file, name => "hashInput.txt");
+			set_input(data);
+
+			probeKnt := 1;
+			minProbes := 1;
+			maxProbes := 1;
+			avgProbes := 0.0;
+			elemKnt := 0;
+			collisionKnt := 0;
+			for i in 1..tS
+				loop
+					hashTable(i).key := "XXXXXXXXXXXXXXXXX";
+					hashTable(i).hashAddress := 0;
+					hashTable(i).numProbes := 0;
+				end loop;
+
+			for i in 1..numElems
+				loop
+					elemTable(i).key := "XXXXXXXXXXXXXXXXX";
+					elemTable(i).hashAddress := 0;
+					elemTable(i).numProbes := 1;
+				end loop;
+
+				-- my hash function
+				for i in 1..numElems
+					loop
+						get_line(string(key), s);
+						hA := getMyHashAddress(key);
+						if hashTable(ha).hashAddress = 0 then
+							hashTable(ha).key := key;
+							hashTable(ha).hashAddress := hA;
+							hashTable(ha).numProbes := probeKnt;
+						else
+							collisionKnt := collisionKnt + 1;
+							if linear = true then
+								hA := hA + 1;
+								probeKnt := probeKnt + 1;
+							elsif linear = false then
+								hA := hA + uniqueRandInteger;
+								probeKnt := probeKnt + 1;
+							end if;
+							if hA > tS then
+								hA := hA - tS;
+							end if;
+							hashTable(ha).key := key;
+							hashTable(ha).hashAddress := hA;
+							hashTable(ha).numProbes := probeKnt;
+							elemTable(i).key := key;
+							elemTable(i).hashAddress := hA;
+							elemTable(i).numProbes := probeKnt;
+						end if;
+					end loop;
+
+			-- print the contents of table two
+			new_line;
+			put("-My Hash Function-");
+			new_line;
+			put("KEY");
+			put("                           ");
+			put("ADDRESS");
+			put("          ");
+			put("PROBES");
+			new_line;
+
+			for i in 1..tS
+				loop
+					myPut(hashTable(i).key);
+					put("     ");
+					put(hashTable(i).hashAddress);
+					put("     ");
+					put(hashTable(i).numProbes);
+					new_line;
+				end loop;
+
+			-- get the min, max, and average probes for the first thirty elements in list two
+			for i in 1..firstThirty
+				loop
+					if maxProbes < elemTable(i).numProbes then
+						maxProbes := elemTable(i).numProbes;
+					else
+						maxProbes := maxProbes;
+					end if;
+					if  elemTable(i).numProbes < minProbes then
+						minProbes := elemTable(i).numProbes;
+					else
+						minProbes := minProbes;
+					end if;
+				end loop;
+			for i in 1..firstThirty
+				loop
+					avgProbes := avgProbes + float(elemTable(i).numProbes);
+					elemKnt := elemKnt + 1;
+				end loop;
+			avgProbes := float(avgProbes) / float(elemKnt);
+
+			new_line;
+			put("Min probes of first thirty: ");
+			put(minProbes);
+			new_line;
+			put("Max probes of first thirty: ");
+			put(maxProbes);
+			new_line;
+			put("Avg probes of first thirty: ");
+			put(integer(avgProbes));
+
+			-- get the min, max, and average probes for the last thirty elements in list two
+			minProbes := 1;
+			maxProbes := 1;
+			avgProbes := 0.0;
+			elemKnt := 0;
+			for i in lastThirty..numElems
+				loop
+					if maxProbes < elemTable(i).numProbes then
+						maxProbes := elemTable(i).numProbes;
+					else
+						maxProbes := maxProbes;
+					end if;
+					if  elemTable(i).numProbes < minProbes then
+						minProbes := elemTable(i).numProbes;
+					else
+						minProbes := minProbes;
+					end if;
+				end loop;
+			for i in lastThirty..numElems
+				loop
+					avgProbes := avgProbes + float(elemTable(i).numProbes);
+					elemKnt := elemKnt + 1;
+				end loop;
+			avgProbes := float(avgProbes) / float(elemKnt);
+
+			new_line;
+			put("Min probes of last thirty:  ");
+			put(minProbes);
+			new_line;
+			put("Max probes of last thirty:  ");
+			put(maxProbes);
+			new_line;
+			put("Avg probes of last thirty:  ");
+			put(integer(avgProbes));
+			new_line;
+			put("Number of collisions: ");
+			put(collisionKnt);
+
+		end;
+
+	end hash;

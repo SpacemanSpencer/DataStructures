@@ -1,0 +1,284 @@
+C:\GNAT\2018\bin\Spencerhash\obj\hash.exe
+Enter the hash table size: 128
+Enter percentage to fill table: .50
+Linear probe technique? [True/False] False
+Number of elements:          64
+
+-Burris Hash Function-
+KEY                           ADDRESS          PROBES
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Syncopate                      9              23
+Salkowski                     10               2
+Scott                         11              12
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Fabulous                      17              20
+XXXXXXXXXXXXXXXXX               0               0
+Fernando                      19              18
+Farral                        20               7
+Paschal                       21               2
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Zulfiqar                      24               2
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Christopher                   27              18
+Charles                       28              15
+Constriction                  29              22
+Maiden                        30              21
+Carmona                       31               1
+Crouch                        32               5
+Michael                       33              13
+Misogamist                    34              20
+Matthew                       35              13
+Wade                          36              17
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+James                         42              16
+Joel                          43              19
+Jordon                        44              13
+Joseph                        45               8
+John                          46              14
+Judy                          47              12
+Todd                          48              13
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Gurung                        56               8
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Garza                         59               7
+XXXXXXXXXXXXXXXXX               0               0
+Qamruddin                     61               2
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Dugger                        66               7
+XXXXXXXXXXXXXXXXX               0               0
+Derek                         68              12
+Daniels                       69               2
+Necromancer                   70              23
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Nienberg                      73               2
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Akhila                        78              14
+Arauza                        79               3
+Kyle                          80              12
+Aguirrie                      81               1
+Ajose                         82               2
+Acevedo                       83               2
+Kelly                         84               8
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Red                           88               2
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+1234567890123456              94               1
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Eye                           97              21
+Robert                        98              11
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Egbe                         107               7
+Ellington                    108               7
+XXXXXXXXXXXXXXXXX               0               0
+Octavio                      110              12
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Buck                         117               4
+Batbold                      118              18
+XXXXXXXXXXXXXXXXX               0               0
+Bhandari                     120               1
+Lisa                         121              13
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Vinnela                      126              13
+Veronica                     127              13
+XXXXXXXXXXXXXXXXX               0               0
+
+Min probes of first thirty:           1
+Max probes of first thirty:           9
+Avg probes of first thirty:           2
+Min probes of last thirty:            1
+Max probes of last thirty:           23
+Avg probes of last thirty:            7
+Number of collisions:          22
+
+-My Hash Function-
+KEY                           ADDRESS          PROBES
+Misogamist                     1              19
+Buck                           2               4
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Aguirrie                       6               1
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Ellington                     10               5
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Salkowski                     13               2
+XXXXXXXXXXXXXXXXX               0               0
+Fernando                      15              18
+Judy                          16              10
+Necromancer                   17              20
+Alcantara                     18               1
+XXXXXXXXXXXXXXXXX               0               0
+Christopher                   20              18
+XXXXXXXXXXXXXXXXX               0               0
+Constriction                  22              20
+Fabulous                      23              19
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Zulfiqar                      29               2
+XXXXXXXXXXXXXXXXX               0               0
+Syncopate                     31              20
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Paschal                       36               1
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Red                           39               2
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Octavio                       44               9
+XXXXXXXXXXXXXXXXX               0               0
+Batbold                       46              18
+Jeffrey                       47              10
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Maiden                        50              19
+1234567890123456              51               1
+Akhila                        52              14
+Daniels                       53               1
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Michael                       56              14
+Matthew                       57              13
+XXXXXXXXXXXXXXXXX               0               0
+Eye                           59              20
+Acevedo                       60               3
+XXXXXXXXXXXXXXXXX               0               0
+Joseph                        62               6
+Davies                        63               5
+Jordon                        64              10
+Charles                       65              16
+Casper                        66               1
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Vinnela                       69              11
+XXXXXXXXXXXXXXXXX               0               0
+Arauza                        71               3
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Robert                        74               8
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Dugger                        77               5
+Crouch                        78               4
+XXXXXXXXXXXXXXXXX               0               0
+Gurung                        80               5
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Clayton                       83               7
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Dustin                        86               7
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+James                        101              16
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Wade                         104              18
+Derek                        105              10
+XXXXXXXXXXXXXXXXX               0               0
+Egbe                         107               5
+Lisa                         108              12
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Kelly                        112               6
+XXXXXXXXXXXXXXXXX               0               0
+Todd                         114              12
+Chris                        115              17
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Scott                        118               9
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Cook                         121               1
+Garza                        122               5
+XXXXXXXXXXXXXXXXX               0               0
+Ajose                        124               3
+Joel                         125              19
+XXXXXXXXXXXXXXXXX               0               0
+John                         127              15
+Veronica                     128              13
+
+Min probes of first thirty:           1
+Max probes of first thirty:           6
+Avg probes of first thirty:           2
+Min probes of last thirty:            1
+Max probes of last thirty:           20
+Avg probes of last thirty:            6
+Number of collisions:          19
+[2018-11-25 15:46:50] process terminated successfully, elapsed time: 16.98s

@@ -1,0 +1,284 @@
+C:\GNAT\2018\bin\Spencerhash\obj\hash.exe
+Enter the hash table size: 128
+Enter percentage to fill table: .90
+Linear probe technique? [True/False] True
+Number of elements:         115
+
+-Burris Hash Function-
+KEY                           ADDRESS          PROBES
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Irreversible                   6              31
+XXXXXXXXXXXXXXXXX               0               0
+tiller                         8              64
+Syncopate                      9              29
+toluene                       10              53
+Scott                         11              14
+Staple                        12              34
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Finagle                       17              35
+guard                         18              60
+Fernando                      19              23
+Farral                        20               8
+quandary                      21              55
+Perfect                       22              39
+Person                        23              30
+Zulfiqar                      24               2
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+dactyl                        29              55
+Cook                          30               2
+nosegay                       31              56
+noggin                        32              61
+Constriction                  33              28
+Maiden                        34              27
+Misogamist                    35              26
+Wade                          36              22
+Wine                          37              37
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Jordon                        44              15
+Joseph                        45               9
+James                         46              21
+Joel                          47              24
+Jutty                         48              35
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+ratiocination                 58              44
+rationalize                   59              51
+Gurung                        60               9
+Qamruddin                     61               2
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+exhilarate                    66              59
+XXXXXXXXXXXXXXXXX               0               0
+Derek                         68              14
+Daniels                       69               2
+orthodontist                  70              46
+option                        71              57
+XXXXXXXXXXXXXXXXX               0               0
+Nienberg                      73               2
+Necromancer                   74              29
+Northwest                     75              31
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Alcantara                     80               1
+brutalize                     81              43
+live                          82              47
+Arauza                        83               3
+Kyle                          84              14
+XXXXXXXXXXXXXXXXX               0               0
+Under                         86              34
+XXXXXXXXXXXXXXXXX               0               0
+Red                           88               2
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+inlet                         93              48
+1234567890123456              94               1
+ichthyosaur                   95              64
+XXXXXXXXXXXXXXXXX               0               0
+Eye                           97              27
+seal                          98              63
+seat                          99              64
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+forgetful                    105              57
+XXXXXXXXXXXXXXXXX               0               0
+Egbe                         107               8
+cap                          108              44
+prepossess                   109              44
+prologue                     110              62
+privilege                    111              58
+XXXXXXXXXXXXXXXXX               0               0
+wet                          113              53
+Yolk                         114              29
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+cauldron                     117              44
+Batbold                      118              23
+constrain                    119              49
+Bhandari                     120               1
+mole                         121              40
+magnetic                     122              48
+marsupial                    123              50
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Vinnela                      126              15
+Veronica                     127              16
+XXXXXXXXXXXXXXXXX               0               0
+
+Min probes of first thirty:           1
+Max probes of first thirty:          10
+Avg probes of first thirty:           3
+Min probes of last thirty:            1
+Max probes of last thirty:           64
+Avg probes of last thirty:           37
+Number of collisions:          63
+
+-My Hash Function-
+KEY                           ADDRESS          PROBES
+Misogamist                     1              19
+Nienberg                       2               1
+exhilarate                     3              44
+marsupial                      4              37
+magnetic                       5              36
+Aguirrie                       6               1
+guard                          7              45
+Jutty                          8              25
+Fabricate                      9              22
+prologue                      10              47
+parasympathetic               11              32
+orthodontist                  12              35
+Salkowski                     13               2
+Judy                          14              10
+Irreversible                  15              22
+XXXXXXXXXXXXXXXXX               0               0
+Necromancer                   17              19
+Alcantara                     18               1
+Afterwards                    19              20
+Christopher                   20              18
+XXXXXXXXXXXXXXXXX               0               0
+Constriction                  22              19
+Fabulous                      23              19
+XXXXXXXXXXXXXXXXX               0               0
+prepossess                    25              33
+privilege                     26              43
+XXXXXXXXXXXXXXXXX               0               0
+constrain                     28              37
+quandary                      29              40
+forgetful                     30              43
+Syncopate                     31              19
+cap                           32              32
+XXXXXXXXXXXXXXXXX               0               0
+ichthyosaur                   34              49
+XXXXXXXXXXXXXXXXX               0               0
+Paschal                       36               1
+wet                           37              39
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+brutalize                     43              32
+Octavio                       44               9
+Northwest                     45              21
+Perfect                       46              30
+Jeffrey                       47              10
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Maiden                        50              19
+1234567890123456              51               1
+Akhila                        52              14
+nosegay                       53              42
+Screen                        54              29
+XXXXXXXXXXXXXXXXX               0               0
+Eye                           56              19
+Matthew                       57              13
+XXXXXXXXXXXXXXXXX               0               0
+Carmona                       59               1
+Joseph                        60               6
+Davies                        61               5
+Farral                        62               5
+Charles                       63              16
+Jordon                        64              10
+dactyl                        65              41
+Casper                        66               1
+Vinnela                       67              11
+noggin                        68              46
+Person                        69              20
+sparse                        70              39
+tiller                        71              49
+Robert                        72               8
+Staple                        73              24
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+sponsor                       76              43
+Dugger                        77               5
+Crouch                        78               4
+poison                        79              32
+Gurung                        80               5
+toluene                       81              38
+XXXXXXXXXXXXXXXXX               0               0
+Clayton                       83               7
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Dustin                        86               7
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+James                        101              16
+Wade                         102              18
+XXXXXXXXXXXXXXXXX               0               0
+XXXXXXXXXXXXXXXXX               0               0
+Derek                        105              10
+Lisa                         106              12
+Egbe                         107               5
+wince                        108              34
+Wine                         109              28
+live                         110              36
+XXXXXXXXXXXXXXXXX               0               0
+Kelly                        112               6
+seal                         113              48
+Todd                         114              12
+inlet                        115              37
+mole                         116              31
+XXXXXXXXXXXXXXXXX               0               0
+Scott                        118               9
+scat                         119              38
+seat                         120              48
+Cook                         121               1
+Cook                         122              27
+ratiocination                123              33
+Ajose                        124               3
+Rush                         125              28
+Honor                        126              23
+Bhandari                     127               1
+Buck                         128               4
+
+Min probes of first thirty:           1
+Max probes of first thirty:           6
+Avg probes of first thirty:           2
+Min probes of last thirty:            1
+Max probes of last thirty:           49
+Avg probes of last thirty:           23
+Number of collisions:          48
+[2018-11-25 15:46:05] process terminated successfully, elapsed time: 11.72s
