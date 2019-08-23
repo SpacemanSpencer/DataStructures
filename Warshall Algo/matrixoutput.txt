@@ -1,0 +1,10 @@
+     A     B     C     D     E     F     G     H 	   J
+A:  true  true  true  true  true false false false 	false 
+B:  true  true  true  true  true false false false 	false 
+C: false false false  true  true false false false 	false 
+D: false false false false false false false false 	false 
+E: false false false false false false false false 	false 
+F: false false false false false  true  true  true  	true 
+G: false false false false false  true  true  true  	true 
+H: false false false false false  true  true  true  	true 
+J: false false false false false false false false 	false 
